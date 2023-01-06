@@ -139,3 +139,7 @@ export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
    - To allow access, go to the `AWS Console` -> `EC2 instances` -> Click `Master` instance -> `Security` -> Click the security group link -> `Edit inbound rules` -> `Add rule` -> `Type = Custom TCP`, `Port range = 9870`, `Source = My IP` -> `Save rules`.
 
 ## Congratulations! You have deployed Hadoop on an AWS cluster of 3 machines!
+
+### Important !!
+* ***Please remember to stop the AWS instances when you don't use them! You only have 750 hours per month for free.***
+* ***Whenever you restart the AWS instances, the IP addresses may be changed. You need to modify the settings of AWS and Hadoop accordingly!***
