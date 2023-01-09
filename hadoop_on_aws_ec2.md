@@ -24,7 +24,7 @@
    - Under tab `Instance type`, select `t2.micro` (by default).
    - Under tab `Key pair`, select the one created in Step 1.
    - On the right `Summary`, select `3` in `Number of instances`, then `Launch instance`.
-   - Wait for the 3 instances' statuses become `running`.
+   - Click `View all instances` and wait for the 3 instances' statuses become `running`.
  - Use terminal to connect to the instances.
    - On Linux/Mac, 
 ```bash
