@@ -72,6 +72,7 @@ cat .ssh/id_rsa.pub
 ```
  - Copy and append all 3 public keys to all 3 instances' `.ssh/authorized_keys` file.
  - Verify that you can ssh login in all the following directions without password.
+
 On `Master` run the following,
 ```bash
 # From Master to Master
