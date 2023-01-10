@@ -3,7 +3,7 @@
 > This tutorial is based on [How to create a Hadoop Cluster for free in AWS Cloud?](https://medium.com/analytics-vidhya/how-to-create-a-hadoop-cluster-for-free-in-aws-cloud-a95154980b11).
 
 ## Prerequisites
- - A free AWS account, [to register](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?refid=ft_card).
+ - A free AWS account, [to register](http://aws.amazon.com/free).
 
 *Note: we assume you use the 12-Month free tier resources (750 hours/month + 30GB storage/year) provided by AWS, see [this page](https://aws.amazon.com/free/free-tier/) for more information.*
 
