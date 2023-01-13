@@ -141,9 +141,21 @@ export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
  - Check the status of Hadoop cluster by entering `<public-ip-of-master>:9870` in your browser. If you reach a web page with “Namenode Information” you have started Hadoop successfully. You should have 3 live nodes listed.
    - **Note:** For the default network security setting of AWS instance, this port is not accessible. 
    - To allow access, go to the `AWS Console` -> `EC2 instances` -> Click `Master` instance -> `Security` -> Click the security group link -> `Edit inbound rules` -> `Add rule` -> `Type = Custom TCP`, `Port range = 9870`, `Source = My IP` -> `Save rules`.
+ - To use HDFS: On `Master` node, run the following command in `<HadoopInstallationFolder>/bin/` folder
+```bash
+./hadoop fs -help
+
+# Basic usage
+./hadoop fs -ls /  # list files under root directory
+./hadoop fs -put localFile.txt /hdfsFile.txt  # copy a local file to hdfs under /
+./hadoop fs -cat /hdfsFile.txt  # cat an hdfs file
+```
 
 ## Congratulations! You have deployed Hadoop on an AWS cluster of 3 machines!
 
 ### Important !!
 * ***Please remember to stop the AWS instances when you don't use them! You only have 750 hours per month for free.***
 * ***Whenever you restart the AWS instances, the IP addresses may be changed. You need to modify the settings of AWS and Hadoop accordingly!***
+
+# Appendix
+ - Official Doc: [Hadoop Cluster Setup](https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/ClusterSetup.html)
