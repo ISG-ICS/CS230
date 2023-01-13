@@ -118,6 +118,7 @@ tar -zxvf hadoop-3.3.4.tar.gz
  - On all 3 nodes: Append the following lines in `<HadoopInstallationFolder>/etc/hadoop/core-site.xml` file inside the `<configuration>`. Replace the ip with your `<private-ip-of-master>`.
     - **Note:** For the default network security setting of AWS instance, port `54310` on `Master` node is not accessible from worker nodes. 
     - To allow access, go to the `AWS Console` -> `EC2 instances` -> Click `Master` instance -> `Security` -> Click the security group link -> `Edit inbound rules` -> `Add rule` -> `Type = Custom TCP`, `Port range = 54310`, `Source = 172.31.0.0/16` -> `Save rules`.
+    - **Note:** When you upload data to HDFS, the `Master` node will use the port `9866` to connect with `Worker` nodes, so you need to allow access of port `9866` to `172.31.0.0/16` ip ranges on both `Worker` nodes too.
 ```bash
 <property>
 <name>fs.default.name</name>
